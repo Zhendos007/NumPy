@@ -1,0 +1,28 @@
+import numpy as np
+import random
+import time
+
+print('First task :')
+size = 1000000
+max = 1000
+min = -1000
+arr1 = np.random.randint(min, max, size)
+arr2 = np.random.randint(min, max, size)
+
+beginnp = time.perf_counter()
+npm = np.multiply(arr1, arr2)
+npTime = time.perf_counter() - beginnp
+print("Time with NumPy : ", npTime)
+
+beginl = time.perf_counter()
+listt = []
+list1 = []
+list2 = []
+for i in range(size):
+    list1.append(random.randint(min, max,))
+for i in range(size):
+    list2.append(random.randint(min, max,))
+for i in range(size):
+    listt.append(list1[i] * list2[i])
+lTime = time.perf_counter() - beginl
+print("Time without NumPy : ", lTime)
